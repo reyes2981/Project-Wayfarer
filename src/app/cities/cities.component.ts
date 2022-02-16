@@ -9,8 +9,9 @@ import { CitiesService } from '../cities.service';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
+
   cities: any = CITIES;
-  
+
 
   constructor(private route: ActivatedRoute, private cityService: CitiesService) { }
 
