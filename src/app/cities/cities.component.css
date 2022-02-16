@@ -1,0 +1,30 @@
+.container {
+    border: 1px solid;    
+    margin-top: 20px;
+}
+
+.cities {
+    width: 400px;
+    height: 600px;
+    background-color: lightgray;
+    border: 1px solid;
+    
+}
+#cities-title {
+    text-align: center;
+    padding-top: 10px;
+}
+#gibraltar, #san-francisco, #london {
+    height: 80px;
+    width: 160px;
+    border: 2px solid;   
+    margin-bottom: 50px; 
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.cities > div {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 50px;    
+    align-items: center;    
+}
