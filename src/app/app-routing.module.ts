@@ -11,8 +11,23 @@ const routes: Routes = [
 }, 
 {
     path: 'cities',
+<<<<<<< HEAD
     component: CitiesComponent
+=======
+    component: CitiesComponent,
+    children: [
+      {
+        path: ':id',
+        component: CityComponent
+      },
+      // {
+      //   path: ':id/posts/:postId',
+      //   component: PostComponent
+      // }
+    ]
+>>>>>>> e1c4d0e470dd34d3617422a5e6fc94ca5394cdf5
 },
+
 ];
 
 @NgModule({
