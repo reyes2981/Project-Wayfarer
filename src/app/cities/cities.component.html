@@ -1,2 +1,15 @@
-<h1>cities component is working</h1>
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="cities">
+        <h1 id="cities-title">Cities</h1>
+        <div>
+            <img id="gibraltar" src="../../assets/images/gibraltar.jpg"/>
+            <h3><a routerLink="/cities/{{city.id}}">Gibraltar</a></h3></div>            
+        <div>
+            <img id="san-francisco" src="../../assets/images/sanfran.jpg"/>
+            <h3>San Francisco</h3></div>
+        <div>
+            <img id="london" src="../../assets/images/london.jpg"/>
+            <h3>London</h3></div>
+    </div>  
+</div>

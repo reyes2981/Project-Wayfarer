@@ -10,9 +10,20 @@ const routes: Routes = [
     component: GalleryComponent
 }, 
 {
-    path: 'cities/:id',
-    component: CitiesComponent
+    path: 'cities',
+    component: CitiesComponent,
+    children: [
+      {
+        path: ':id',
+        component: CityComponent
+      },
+      // {
+      //   path: ':id/posts/:postId',
+      //   component: PostComponent
+      // }
+    ]
 },
+
 ];
 
 @NgModule({
