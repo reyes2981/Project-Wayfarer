@@ -10,7 +10,7 @@ const routes: Routes = [
     component: GalleryComponent
 }, 
 {
-    path: 'cities/:id',
+    path: 'cities',
     component: CitiesComponent
 },
 ];
