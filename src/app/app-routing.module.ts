@@ -11,7 +11,18 @@ const routes: Routes = [
 }, 
 {
     path: 'cities',
-    component: CitiesComponent
+
+    component: CitiesComponent,
+    children: [
+      {
+        path: ':id',
+        component: CityComponent
+      },
+      // {
+      //   path: ':id/posts/:postId',
+      //   component: PostComponent
+      // }
+    ]
 },
 
 ];
