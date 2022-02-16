@@ -9,16 +9,17 @@ import { CitiesService } from '../cities.service';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
-  city: any = CITIES;
+  cities: any = CITIES;
+  
 
   constructor(private route: ActivatedRoute, private cityService: CitiesService) { }
 
   ngOnInit(): void {
-    console.log ("kfsjaofje");
+    console.log ("djj;lsjf");
     this.route.paramMap
     .subscribe(p => {
       this.cityService.chosenCity = CITIES.find(city => {  
-        return city.id === (p.get('id'), 10);  
+        return city.id === (p.get('id'), 10);       
       })
     })
   }
