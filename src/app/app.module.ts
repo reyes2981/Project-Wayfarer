@@ -14,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
     NavComponent,
     PostComponent,
     CitiesComponent,
-    CityComponent
+    CityComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -24,25 +25,3 @@ import { AppRoutingModule } from './app-routing.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-// import { BrowserModule } from '@angular/platform-browser';
-// import { NgModule } from '@angular/core';
-
-// import { AppComponent } from './app.component';
-
-// // Below this is new
-// import { AppRoutingModule } from './app-routing.module'; // replace RouterModule with this import statement
-
-
-// @NgModule({
-//     declarations: [
-//         AppComponent,
-//     ],
-//     imports: [
-//         BrowserModule,
-//         AppRoutingModule // replace the RouterModule array with this line
-//     ],
-//     providers: [],
-//     bootstrap: [AppComponent]
-// })
-// export class AppModule { }
