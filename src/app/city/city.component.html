@@ -1,9 +1,21 @@
-<div  class="component-card">
-   <div>
+<div class="container-fluid">
+<div  class="row component-card">
+   <div class="col-sm-4">
        <h1>{{city.name}}</h1>
    </div>
-   <div>
-       <img src="{{city.imgUrl}}" />
+   <div class="col-sm-8">
+       <img src="{{city.imgUrl}}" height="300" width="600"/>
    </div>
+   <div>
+       <h1>Posts</h1>
+       <div *ngFor="let post of city.posts; index as i">
+           <div>
+                <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{city.name}} {{post.title}}</a></h1>
+                <p>{{post.body}}</p>
+           </div>
+       </div>
+       
+   </div>
+</div>
 </div>
 
