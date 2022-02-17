@@ -31,7 +31,7 @@ export const CITIES = [
     }]
   }, {
     id: 3,
-    name: 'london',
+    name: 'London',
     imgUrl: 'assets/images/london.jpg',
     posts: [{
       title: "Fake title 1",

@@ -14,7 +14,12 @@ export class CityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.route.paramMap
+    .subscribe(p => {
+      this.city = CITIES.find(city => {  
+        return city.id === parseInt(p.get('id') || '', 10);       
+      });
+    });
   }
 
 }

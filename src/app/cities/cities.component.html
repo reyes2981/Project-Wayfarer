@@ -1,15 +1,20 @@
-<router-outlet></router-outlet>
+
 <div class="container">
     <div class="cities">
         <h1 id="cities-title">Cities</h1>
-        <div>
-            <img id="gibraltar" src="../../assets/images/gibraltar.jpg"/>
-            <h3><a routerLink="/cities/{{city.id}}">Gibraltar</a></h3></div>            
-        <div>
-            <img id="san-francisco" src="../../assets/images/sanfran.jpg"/>
-            <h3><a routerLink="/cities/{{2}}">San Francisco</a></h3></div>
-        <div>
-            <img id="london" src="../../assets/images/london.jpg"/>
-            <h3><a routerLink="/cities/{{3}}">LondonBridge</a></h3></div>
-    </div>  
+
+        <div *ngFor="let city of cities">
+            <div>
+                <img id="gibraltar" src="{{city.imgUrl}}">
+                <h3>
+                    <a routerLink="/cities/{{city.id}}">
+                        {{city.name}}
+                    </a>
+                </h3>
+            </div>
+
+        </div>
+       
+        <router-outlet></router-outlet>
+       
 </div>
