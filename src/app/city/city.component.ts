@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: 'app-city',
   templateUrl: './city.component.html',
@@ -10,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 export class CityComponent implements OnInit {
   cities: any = CITIES;
   city: any;
+  
+  
   constructor(private route: ActivatedRoute) {     
   }
 
@@ -21,5 +24,15 @@ export class CityComponent implements OnInit {
       });
     });
   }
+
+  Display(){
+   this.city.posts.push('Title');
+  //  this.city.posts.push('Author');
+  //  this.city.post.push('textarea');
+   console.log(this.city.post);
+
+    // $scope.AllTopic.push($scope.Topic);
+  }
+  
 
 }
