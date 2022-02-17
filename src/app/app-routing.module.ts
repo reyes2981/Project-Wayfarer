@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CitiesComponent } from './cities/cities.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CityComponent } from './city/city.component';
+import { PostComponent } from './post/post.component';
 
 const routes: Routes = [
   {
@@ -18,10 +19,10 @@ const routes: Routes = [
         path: ':id',
         component: CityComponent
       },
-      // {
-      //   path: ':id/posts/:postId',
-      //   component: PostComponent
-      // }
+      {
+        path: ':id/posts/:postId',
+        component: PostComponent
+      }
     ]
 },
 
