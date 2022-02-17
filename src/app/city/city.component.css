@@ -1,5 +1,8 @@
 
-.component-card img{
+.component-card {
+    margin-bottom: 40px
+  }
+.component-card > img{
     display: block;
     width: 100%;
     height: 300px;
