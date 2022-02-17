@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { CITIES } from '../cities';
-import { CitiesService } from '../cities.service';
 
 @Component({
   selector: 'app-cities',
@@ -13,15 +11,9 @@ export class CitiesComponent implements OnInit {
   cities: any = CITIES;
 
 
-  constructor(private route: ActivatedRoute, private cityService: CitiesService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log ("djj;lsjf");
-    this.route.paramMap
-    .subscribe(p => {
-      this.cityService.chosenCity = CITIES.find(city => {  
-        return city.id === (p.get('id'), 10);       
-      })
-    })
+    
   }
 }
