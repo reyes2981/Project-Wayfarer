@@ -3,6 +3,7 @@ export const CITIES = [
     id: 1,
     name: 'Gibraltar',
     imgUrl: 'assets/images/gibraltar.jpg',
+    country: 'gi',
     posts: [{
       title: "Fake title 1",
       author: 'Schmitty1',
@@ -16,6 +17,7 @@ export const CITIES = [
     id: 2,
     name: 'San Francisco',
     imgUrl: 'assets/images/sanfran.jpg',
+    country: 'us',
     posts: [{
       title: "Fake title 1",
       author: 'Schmitty1',
@@ -31,6 +33,7 @@ export const CITIES = [
     id: 3,
     name: 'London',
     imgUrl: 'assets/images/london.jpg',
+    country: 'uk',
     posts: [{
       title: "Fake title 1",
       author: 'Schmitty1',
