@@ -13,12 +13,8 @@ export class CityComponent implements OnInit {
   cities: any = CITIES;
   weather: any;
   city: any;
-  title: any;
-  author: any;
-  post: any;
-  zip: any;
   country: any;
-  addedList: any[] =Array();
+  // addedList: any[] =Array();
   
 
 
@@ -32,7 +28,7 @@ export class CityComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {     
     route.params.subscribe(val => {
-      this.findWeather(this.city.name, this.city.country)    
+      this.findWeather(this.city.name || '', this.city.country || '')    
     })
   }
 
@@ -47,12 +43,6 @@ export class CityComponent implements OnInit {
       });
   }
 
-  addForm(title: string, author: string, post: string){
-    this.addedList.push(title);
-    this.addedList.push(author);
-    this.addedList.push(post);
-
-  }
 
 
   ngOnInit(): void {
@@ -63,7 +53,7 @@ export class CityComponent implements OnInit {
         return city.id === parseInt(p.get('id') || '', 10);       
       });
     });
-    this.findWeather(this.city.name, this.city.country);
+    this.findWeather(this.city.name || '', this.city.country ||'');
   }
   
 
