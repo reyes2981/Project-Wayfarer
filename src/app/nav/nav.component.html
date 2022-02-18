@@ -1,10 +1,36 @@
 <nav id="nav-bar1">
     <div id="logo"></div>
     <a routerLink="/">Wayfarer</a>
-    <a routerLink="/cities/">Cities</a> 
-    <form>
-        <input type="text"[size]="10" placeholder="search"/>
-        <button class = "searchBtn" type="submit">Search</button>
-    </form>
+    <a routerLink="/cities/">Cities</a>
+
+
+    <!-- <div class="col-sm-4">
+        <h1>{{city.name}}</h1>
+    </div>
+    <div class="col-sm-8">
+        <img src="{{city.imgUrl}}" height="300" width="600" />
+    </div>
+    <div>
+        <h1>Posts</h1>
+        <div *ngFor="let post of city.posts; index as i">
+            <div>
+                <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{city.name}} {{post.title}}</a></h1>
+                <p>{{post.body}}</p>
+            </div>
+        </div> -->
+
+
+    <div>
+        <form #form="ngForm" (ngSubmit)="searchBtn('London')">
+            <input type="text" name="search" placeholder="search"  />
+            
+            <!-- <input type="text" name="title" placeholder="Title" ngModel required> -->
+        
+            <input type="submit" value="Search" />
+        
+            <!-- <button class = "searchBtn" type="submit">Search</button> -->
+        </form>
+        
+    </div>
 </nav>
 <!-- <router-outlet></router-outlet> -->

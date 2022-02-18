@@ -20,6 +20,10 @@ const routes: Routes = [
         component: CityComponent
       },
       {
+        path:':name',
+        component: CityComponent
+      },
+      {
         path: ':id/posts/:postId',
         component: PostComponent
       }
