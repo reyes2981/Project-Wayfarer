@@ -19,13 +19,26 @@ export class CityComponent implements OnInit {
   zip: any;
   country: any;
   addedList: any[] =Array();
+  
+
+
+   submit(form: any){
+    console.log(form)
+    form.id=this.city.posts.length+1
+    this.city.posts.push(form);
+    console.log(this.city.posts)
+
+  }
+
   constructor(private route: ActivatedRoute, private http: HttpClient) {     
+    route.params.subscribe(val => {
+      this.findWeather(this.city.name, this.city.country)    
+    })
   }
 
   findWeather(name: string, country: string): void {
     this.http
       .get(
-        // `http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial`
         `https://api.openweathermap.org/data/2.5/weather?q=${name},${country}&APPID=a7c590ba9ef0beb2677f56440b4f04d6&&units=imperial`
       )
       .subscribe((response) => {

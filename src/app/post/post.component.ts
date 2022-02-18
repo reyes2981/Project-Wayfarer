@@ -11,6 +11,7 @@ export class PostComponent implements OnInit {
   cities: any = CITIES;
   city: any;
   post:any;
+  postOne: any;
   
  
 
@@ -25,11 +26,14 @@ export class PostComponent implements OnInit {
         this.city = CITIES.find(city => {
           return city.id === parseInt(params.get('id') || '', 10);
         });
-       
+        // https://www.concretepage.com/questions/675
+        // this.postOne = CITIES.forEach(data => {
+        //   data.posts.find(post => {
+        //     return post.id === parseInt(params.get('id') || '', 10);
+        //   })
+        // })
         this.post = this.city.posts[postId];
         // this.city.posts.slice().reverse();
-        
-
       });
    
   
