@@ -9,3 +9,10 @@
     margin: 10px 0 10px 20px;
     border: 1px solid black;
 } 
+#weather-info{
+  color: coral;
+}
+.temp{
+
+color: lightcoral;
+}
