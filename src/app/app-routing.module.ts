@@ -4,6 +4,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CityComponent } from './city/city.component';
 import { PostComponent } from './post/post.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes = [
@@ -21,8 +22,8 @@ const routes: Routes = [
         component: CityComponent
       },
       {
-        path:':name',
-        component: CityComponent
+        path:'names/:name',
+        component: SearchComponent
         
       },
       {

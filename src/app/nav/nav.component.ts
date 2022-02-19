@@ -3,9 +3,6 @@ import { NgForm } from '@angular/forms';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import {Router} from "@angular/router"
-import { identifierName } from '@angular/compiler';
-
-
 
 @Component({
   selector: 'app-nav',
@@ -15,17 +12,16 @@ import { identifierName } from '@angular/compiler';
 export class NavComponent implements OnInit {
 cities: any= CITIES;
 city: any;
+cityName: any;
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   onSubmit(forma: NgForm){
-    
+    const name = forma.value.nameSearch;
     console.log(forma.value.nameSearch)
-    this.router.navigate(['/cities', forma.value.nameSearch])
+    this.router.navigate(['/cities/names', name])
      
       }
-
-
 
   ngOnInit(): void {
     
