@@ -5,6 +5,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CityComponent } from './city/city.component';
 import { PostComponent } from './post/post.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -22,6 +23,7 @@ const routes: Routes = [
       {
         path:':name',
         component: CityComponent
+        
       },
       {
         path: ':id/posts/:postId',
@@ -33,7 +35,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
     exports: [RouterModule]
   })
   export class AppRoutingModule { }

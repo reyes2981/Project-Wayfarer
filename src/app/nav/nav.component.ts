@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import {Router} from "@angular/router"
+import { identifierName } from '@angular/compiler';
 
 
 
@@ -15,48 +16,19 @@ export class NavComponent implements OnInit {
 cities: any= CITIES;
 city: any;
 
-
-// searchBtn(form: string){
-//   if(form === 'London'){
-//     console.log("wkdsjfkljdf");
-//   }
-//   console.log(form)
-// }
-
-/*
-  searchBtn(form: NgForm){
-    // if(form === this.city.name){
-    //   console.log("wkdsjfkljdf");
-    // }
-    console.log(form)
-   
-
-  }
-  */
-
   constructor(private route: ActivatedRoute, private router: Router) { }
 
-  searchBtn(form: any ){
-    console.log(form)
-    this.router.navigate(['/cities', form])
-    // this.cities.forEach(obj => {
-    //   if(obj.name.include(form)){
-    //     this.cityNames.push(obj);
-    //     console.log(this.cityNames)
-        console.log("kdfjkdjf");
-        
-        
+  onSubmit(forma: NgForm){
+    
+    console.log(forma.value.nameSearch)
+    this.router.navigate(['/cities', forma.value.nameSearch])
+     
       }
 
 
 
   ngOnInit(): void {
-    this.route.paramMap
-    .subscribe(p => {
-      this.city = CITIES.find(city => {  
-        return city.name === (p.get('name') || '');       
-      });
-    });
+    
   }
 
 }

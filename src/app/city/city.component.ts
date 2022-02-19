@@ -12,12 +12,10 @@ import { HttpClient } from '@angular/common/http';
 export class CityComponent implements OnInit {
   cities: any = CITIES;
   weather: any;
-  city: any;
+  city: any ;
   country: any;
-  // addedList: any[] =Array();
+
   
-
-
    submit(form: any){
     console.log(form)
     form.id=this.city.posts.length+1
@@ -38,7 +36,6 @@ export class CityComponent implements OnInit {
         `https://api.openweathermap.org/data/2.5/weather?q=${name},${country}&APPID=a7c590ba9ef0beb2677f56440b4f04d6&&units=imperial`
       )
       .subscribe((response) => {
-        console.log(response);
         this.weather = response;
       });
   }
@@ -54,6 +51,13 @@ export class CityComponent implements OnInit {
       });
     });
     this.findWeather(this.city.name || '', this.city.country ||'');
+
+    // this.route.paramMap
+    // .subscribe(par => {
+    //   this.city = CITIES.find(city => {  
+    //     return city.name === (par.get('name') || '');       
+    //   });
+    // });
   }
   
 
