@@ -1,11 +1,17 @@
+.navbar-brand {
+    height: 50px;
+    width: 50px;
+    position: relative;
+    left: 20px;
+}
+
 #nav-bar1 {
-    background-color: lightgreen;
+    background-color: #166088;
     /* height: 50px; */
     padding-top: 14px;
     font-size: 24px;
-   /*  font-weight: bold; */
+    /*  font-weight: bold; */
     height: 60px;
-    
 }
 
 a {
@@ -13,21 +19,28 @@ a {
     position: relative;
     left: 100px;
     padding: 14px 16px;
-
+    color: #DBE9EE;
 }
+
+a:hover {
+    opacity: 50%;
+}
+
 form {
     position: absolute;
-    top: 5px;;
-    right:20px;
-    
+    top: 10px;
+    ;
+    right: 20px;
 }
-form > input{
+
+form>input {
     size: 10px;
 }
+
+
 /* #logo {
     width: 40px;
     height: 40px;
     padding-top: 5px;
     color: red;
 } */
-

@@ -1,18 +1,32 @@
+* {
+    color: #DBE9EE;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 50%;
+    color: #DBE9EE;
+}
 
 .component-card {
     margin-bottom: 40px
-  }
-.component-card > img{
+}
+
+.component-card>img {
     display: block;
     width: 100%;
     height: 300px;
     margin: 10px 0 10px 20px;
     border: 1px solid black;
-} 
-#weather-info{
-  color: coral;
 }
-.temp{
 
-color: lightcoral;
+#weather-info {
+    color: #DBE9EE;
+}
+
+.temp {
+    color: #DBE9EE;
 }

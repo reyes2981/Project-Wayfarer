@@ -2,6 +2,8 @@
     <div class="row component-card">
         <div class="col-sm-4">
             <h1>{{city.name}}</h1>
+
+
             <section *ngIf="weather">
                 <br>
                 <br>
@@ -24,29 +26,28 @@
 
                 <div>
                     <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{city.name}} {{post.title}}</a></h1>
-                    <p>{{post.body}}</p>
+                    <!-- <p>{{post.body}}</p> -->
                 </div>
             </div>
 
 
-           
+
 
             <div>
 
-                <form #form="ngForm" (ngSubmit)="submit(form.value)"> 
-                   
+                <form #form="ngForm" (ngSubmit)="submit(form.value)">
+
                     <h4>Title:</h4>
-                       <input type="text" name="title" placeholder="Title" ngModel required>
-                       <h4>Author:</h4>
-                       <input type="text" name="author" placeholder="Author" ngModel required>
-                       <h4>Post</h4>
-                       <textarea type="text" name="body" rows="4" cols="50" maxlength="200" placeholder="Post" ngModel required></textarea> 
-            
-                        <br>
-                        <input type="submit" value="Post"/>
-            
-                   </form>
-      
+                    <input type="text" name="title" placeholder="Title" ngModel required>
+                    <h4>Author:</h4>
+                    <input type="text" name="author" placeholder="Author" ngModel required>
+                    <h4>Post</h4>
+                    <textarea type="text" name="body" rows="4" cols="50" maxlength="200" placeholder="Post" ngModel required></textarea>
+                    <br>
+                    <button type="submit" form="form1" value="Submit">Submit</button>
+
+                </form>
+
             </div>
 
 
