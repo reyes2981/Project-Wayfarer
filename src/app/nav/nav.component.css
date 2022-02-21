@@ -1,9 +1,7 @@
 #nav-bar1 {
-    background-color: lightgreen;
-    /* height: 50px; */
+    background-color: #166088;
     padding-top: 14px;
     font-size: 24px;
-   /*  font-weight: bold; */
     height: 60px;
     
 }
@@ -12,6 +10,7 @@ a {
     text-decoration: none;
     position: relative;
     left: 100px;
+    color: #C0D6DF;
     padding: 14px 16px;
 
 }
@@ -24,10 +23,13 @@ form {
 form > input{
     size: 10px;
 }
-/* #logo {
-    width: 40px;
-    height: 40px;
-    padding-top: 5px;
-    color: red;
+
+/* #btn:hover {
+    background-color: darkgreen;
+    color: aliceblue;
 } */
+
+a:hover {
+    color: aliceblue;
+}
 
