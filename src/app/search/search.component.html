@@ -17,38 +17,14 @@
         </div>
         <div>
 
-
             <h1>Posts</h1>
             <div *ngFor="let post of city.posts; index as i">
-
 
                 <div>
                     <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{city.name}} {{post.title}}</a></h1>
                     <p>{{post.body}}</p>
                 </div>
             </div>
-
-
-           
-
-            <div>
-
-                <form #form="ngForm" (ngSubmit)="submit(form.value)"> 
-                   
-                    <h4>Title:</h4>
-                       <input type="text" name="title" placeholder="Title" ngModel required>
-                       <h4>Author:</h4>
-                       <input type="text" name="author" placeholder="Author" ngModel required>
-                       <h4>Post</h4>
-                       <textarea type="text" name="body" rows="4" cols="50" maxlength="200" placeholder="Post" ngModel required></textarea> 
-            
-                        <br>
-                        <input type="submit" value="Post"/>
-            
-                   </form>
-      
-            </div>
-
 
         </div>
     </div>
