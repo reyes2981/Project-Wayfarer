@@ -24,11 +24,6 @@ form > input{
     size: 10px;
 }
 
-/* #btn:hover {
-    background-color: darkgreen;
-    color: aliceblue;
-} */
-
 a:hover {
     color: aliceblue;
 }
