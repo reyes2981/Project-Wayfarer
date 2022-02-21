@@ -5,23 +5,15 @@ import { HttpClient } from '@angular/common/http';
 
 
 @Component({
-  selector: 'app-city',
-  templateUrl: './city.component.html',
-  styleUrls: ['./city.component.css']
+  selector: 'app-search',
+  templateUrl: './search.component.html',
+  styleUrls: ['./search.component.css']
 })
-export class CityComponent implements OnInit {
+export class SearchComponent implements OnInit {
   cities: any = CITIES;
   weather: any;
   city: any ;
   country: any;
-
-   submit(form: any){
-    console.log(form)
-    form.id=this.city.posts.length+1
-    this.city.posts.push(form);
-    console.log(this.city.posts)
-
-  }
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {     
     route.params.subscribe(val => {
@@ -44,9 +36,10 @@ export class CityComponent implements OnInit {
     this.route.paramMap
     .subscribe(p => {
       this.city = CITIES.find(city => {  
-        return city.id === parseInt(p.get('id') || '', 10) || city.name === (p.get('name') || '') ;       
+        return city.name === (p.get('name') || '');       
       });
     });
+    
     this.findWeather(this.city.name || '', this.city.country ||'');
 
   }

@@ -4,8 +4,6 @@ import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import {Router} from "@angular/router"
 
-
-
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -14,49 +12,19 @@ import {Router} from "@angular/router"
 export class NavComponent implements OnInit {
 cities: any= CITIES;
 city: any;
-
-
-// searchBtn(form: string){
-//   if(form === 'London'){
-//     console.log("wkdsjfkljdf");
-//   }
-//   console.log(form)
-// }
-
-/*
-  searchBtn(form: NgForm){
-    // if(form === this.city.name){
-    //   console.log("wkdsjfkljdf");
-    // }
-    console.log(form)
-   
-
-  }
-  */
+cityName: any;
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
-  searchBtn(form: any ){
-    console.log(form)
-    this.router.navigate(['/cities', form])
-    // this.cities.forEach(obj => {
-    //   if(obj.name.include(form)){
-    //     this.cityNames.push(obj);
-    //     console.log(this.cityNames)
-        console.log("kdfjkdjf");
-        
-        
+  onSubmit(forma: NgForm){
+    const name = forma.value.nameSearch;
+    console.log(forma.value.nameSearch)
+    this.router.navigate(['/cities/names', name])
+     
       }
 
-
-
   ngOnInit(): void {
-    this.route.paramMap
-    .subscribe(p => {
-      this.city = CITIES.find(city => {  
-        return city.name === (p.get('name') || '');       
-      });
-    });
+    
   }
 
 }
