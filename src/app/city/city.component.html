@@ -6,15 +6,17 @@
                 <br>
                 <br>
                 <h3 id="weather-info">Weather:</h3>
-            
+
                 <p>Currently {{weather.weather[0].description}}</p>
-                <p><em class="temp">Daytime High: </em>&nbsp;&nbsp;<strong> {{ weather.main.temp_max | number: '1.0-0'}}°</strong> <br><em class="temp">Nighttime Low: </em>&nbsp;<strong>{{weather.main.temp_min | number: '1.0-0'}}°</strong>
+                <p><em class="temp">Daytime High: </em>&nbsp;&nbsp;<strong> {{ weather.main.temp_max | number:
+                        '1.0-0'}}°</strong> <br><em class="temp">Nighttime Low:
+                    </em>&nbsp;<strong>{{weather.main.temp_min | number: '1.0-0'}}°</strong>
                 </p>
             </section>
 
         </div>
         <div class="col-sm-8">
-            <img src="{{city.imgUrl}}" style="max-width:100%;height:auto;"/>
+            <img src="{{city.imgUrl}}" style="max-width:100%;height:auto;" />
         </div>
         <div>
 
@@ -30,24 +32,25 @@
             </div>
 
 
-           
+
 
             <div>
 
-                <form #form="ngForm" (ngSubmit)="submit(form.value)"> 
-                   
+                <form #form="ngForm" (ngSubmit)="submit(form.value)">
+
                     <h4>Title:</h4>
-                       <input type="text" name="title" maxlength="200" placeholder="Title" ngModel required>
-                       <h4>Author:</h4>
-                       <input type="text" name="author" placeholder="Author" ngModel required>
-                       <h4>Post</h4>
-                       <textarea type="text" name="body" rows="4" cols="50"  maxlength="200" placeholder="Post" ngModel required></textarea> 
-            
-                        <br>
-                        <input type="submit" value="Post"/>
-            
-                   </form>
-      
+                    <input type="text" name="title" maxlength="200" placeholder="Title" ngModel required>
+                    <h4>Author:</h4>
+                    <input type="text" name="author" placeholder="Author" ngModel required>
+                    <h4>Post</h4>
+                    <textarea type="text" name="body" rows="4" cols="50" maxlength="200" placeholder="Post" ngModel
+                        required></textarea>
+
+                    <br>
+                    <input type="submit" value="Post" />
+
+                </form>
+
             </div>
 
 
