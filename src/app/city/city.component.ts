@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -26,10 +27,14 @@ export class CityComponent implements OnInit {
 
   }
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {     
-    route.params.subscribe(val => {
-      this.findWeather(this.city.name || '', this.city.country || '')    
-    })
+  //Weather wasn't updating so used this code from lines 35 from here:  https://stackoverflow.com/questions/46969864/on-query-parameters-change-route-is-not-updating
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router) {     
+    // route.params.subscribe(val => {
+    //   this.findWeather(this.city.name, this.city.country)  
+    // })
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+
+
   }
 
   findWeather(name: string, country: string): void {
@@ -50,10 +55,12 @@ export class CityComponent implements OnInit {
     this.route.paramMap
     .subscribe(p => {
       this.city = CITIES.find(city => {  
-        return city.id === parseInt(p.get('id') || '', 10);       
+        // return city.id === parseInt(p.get('i') || '', 10);       
+        return city.name === (p.get('name') || '');       
+
       });
     });
-    this.findWeather(this.city.name || '', this.city.country ||'');
+    this.findWeather(this.city.name,  this.city.country );
   }
   
 

@@ -2,10 +2,11 @@
     <div class="row component-card">
         <div class="col-sm-4">
             <h1>{{city.name}}</h1>
-            <section *ngIf="weather">
+            <section  *ngIf="weather">
                 <br>
                 <br>
                 <h3 id="weather-info">Weather:</h3>
+                <strong>{{weather.name}}</strong>
                 <p>Currently {{weather.weather[0].description}}</p>
                 <p><em class="temp">Daytime High: </em>&nbsp;&nbsp;<strong> {{ weather.main.temp_max}}°</strong> <br><em class="temp">Nighttime Low: </em>&nbsp;<strong>{{weather.main.temp_min}}°</strong>
                 </p>
@@ -13,7 +14,8 @@
 
         </div>
         <div class="col-sm-8">
-            <img src="{{city.imgUrl}}" height="300" width="600" />
+            <!-- IMG TAG ADDED THE STYLE FROM: https://www.w3schools.com/html/html_responsive.asp -->
+            <img src="{{city.imgUrl}}" style="max-width:100%;height:auto;" />
         </div>
         <div>
 
@@ -26,7 +28,7 @@
             <div *ngFor="let post of city.posts; index as i">
 
 
-                <div>
+                <div *ngIf="city">
                     <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{city.name}} {{post.title}}</a></h1>
                     <p>{{post.body}}</p>
                 </div>

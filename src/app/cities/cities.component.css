@@ -26,12 +26,16 @@
     display: flex;
     justify-content: space-between;
     margin-right: 50px;    
-    align-items: center;    
+    align-items:center;    
 }
 .cities-card {
   border-radius: 20px;
   border: black solid 1px;
   height: 135px;
   margin: 10px;
-  background-color: white
+  background-color: white;
 }
+/* 
+a{
+    font-size: 2.5vw;
+} */

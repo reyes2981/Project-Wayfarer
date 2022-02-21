@@ -15,10 +15,10 @@ const routes: Routes = [
 
     component: CitiesComponent,
     children: [
-      {
-        path: ':id',
-        component: CityComponent
-      },
+      // {
+      //   path: ':id',
+      //   component: CityComponent
+      // },
       {
         path:':name',
         component: CityComponent

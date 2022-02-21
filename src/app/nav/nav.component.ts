@@ -38,25 +38,32 @@ city: any;
 
   searchBtn(form: any ){
     console.log(form)
-    this.router.navigate(['/cities', form])
+    //WANT TO TAKE THE VALUE AND APPEND TO THE URL AND SEARCH BY NAME
+    this.router.navigate(['/cities', form])// , {relativeTo: this.city.name}
     // this.cities.forEach(obj => {
     //   if(obj.name.include(form)){
     //     this.cityNames.push(obj);
     //     console.log(this.cityNames)
-        console.log("kdfjkdjf");
-        
-        
+        // console.log("this is searchbtn console.log");
+      
       }
 
 
 
+
   ngOnInit(): void {
-    this.route.paramMap
-    .subscribe(p => {
-      this.city = CITIES.find(city => {  
-        return city.name === (p.get('name') || '');       
-      });
-    });
+    // this.route.params.subscribe(params =>{
+    //   if(params.searchTerm)
+    //   this.city = this.cities.getAll().filter(city =>
+    //     city.name.includes(params.searchTerm))
+
+    // })
+    // this.route.paramMap
+    // .subscribe(p => {
+    //   this.city = CITIES.find(city => {  
+    //     return city.name === (p.get('name') || '');       
+    //   });
+    // });
   }
 
 }
