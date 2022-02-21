@@ -3,33 +3,22 @@
     padding-top: 14px;
     font-size: 24px;
     height: 60px;
-    
 }
-
 a {
     text-decoration: none;
     position: relative;
     left: 100px;
     color: #C0D6DF;
     padding: 14px 16px;
-
 }
 form {
     position: absolute;
     top: 5px;;
     right:20px;
-    
 }
 form > input{
     size: 10px;
 }
-
-/* #btn:hover {
-    background-color: darkgreen;
-    color: aliceblue;
-} */
-
 a:hover {
     color: aliceblue;
 }
-
