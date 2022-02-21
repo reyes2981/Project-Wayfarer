@@ -1,7 +1,7 @@
 export const CITIES = [
   {
     id: 1,
-    name: 'Gibraltar',
+    name: 'gibraltar',
     imgUrl: 'assets/images/gibraltar.jpg',
     country: 'gi',
     posts: [{
@@ -17,7 +17,7 @@ export const CITIES = [
     }]
   }, {
     id: 2,
-    name: 'San Francisco',
+    name: 'san francisco',
     imgUrl: 'assets/images/sanfran.jpg',
     country: 'us',
     posts: [{
@@ -33,7 +33,7 @@ export const CITIES = [
     }]
   }, {
     id: 3,
-    name: 'London',
+    name: 'london',
     imgUrl: 'assets/images/london.jpg',
     country: 'uk',
     posts: [{
@@ -48,5 +48,4 @@ export const CITIES = [
       body: 'Let your stomach lead you to delicious restaurants in London or enjoy cocktails and drinks with a meal at pubs and top bars in London. The variety of London food options is mind blowing – sit down to Michelin-starred dining, tuck into street food or hang out at outdoor restaurants.'
     }]
   }
-  
 ];

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CITIES } from '../cities';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,10 +24,13 @@ export class CityComponent implements OnInit {
 
   }
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {     
-    route.params.subscribe(val => {
-      this.findWeather(this.city.name || '', this.city.country || '')    
-    })
+  constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router
+    ) {    
+      this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+ 
+    // route.params.subscribe(val => {
+    //   this.findWeather(this.city.name || '', this.city.country || '')    
+    // })
   }
 
   findWeather(name: string, country: string): void {

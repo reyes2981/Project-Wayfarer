@@ -2,20 +2,16 @@
     border: 1px solid;
     margin-top: 20px;
 }
-
 .cities {
     width: 400px;
     height: 600px;
     background-color: #DBE9EE;
     border: 1px solid;
 }
-
 #cities-title {
-    color: #166088;
     text-align: center;
     padding-top: 10px;
 }
-
 #gibraltar {
     height: 80px;
     width: 160px;
@@ -24,27 +20,24 @@
     margin-top: 30px;
     margin-left: 20px;
 }
-
-.cities>div>div {
+.cities > div > div{
     display: flex;
     justify-content: space-between;
     margin-right: 50px;
     align-items: center;
 }
-
 .cities-card {
-    border-radius: 20px;
-    border: black solid 1px;
-    height: 135px;
-    margin: 10px;
-    background-color: #166088;
+  border-radius: 20px;
+  border: black solid 1px;
+  height: 135px;
+  margin: 10px;
+  background-color: #166088;
 }
-
 a {
-    color: #DBE9EE;
-    text-decoration: none;
+    color: #C0D6DF;
 }
+white_check_mark
+eyes
+raised_hands::skin-tone-4
 
-a:hover {
-    opacity: 50%;
-}
+
