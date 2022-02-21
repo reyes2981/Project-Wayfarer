@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row component-card">
+        <div class="col-sm-4">
+            <h1>{{city.name | titlecase}}</h1>
+            <section *ngIf="weather">
+                <br>
+                <br>
+                <h3 id="weather-info">Weather:</h3>
+                <p>Currently {{weather.weather[0].description}}</p>
+                <p><em class="temp">Daytime High: </em>&nbsp;&nbsp;<strong> {{weather.main.temp_max | number: '1.0-0'}}°</strong> <br><em class="temp">Nighttime Low: </em>&nbsp;<strong>{{weather.main.temp_min | number: '1.0-0'}}°</strong>
+                </p>
+            </section>
+
+        </div>
+        <div class="col-sm-8">
+            <img src="{{city.imgUrl}}" height="300" width="600" />
+        </div>
+        <div>
+
+            <h1>Posts</h1>
+            <div *ngFor="let post of city.posts; index as i">
+
+                <div>
+                    <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}"> {{post.title}}</a></h1>
+                    <p>{{post.body}}</p>
+                </div>
+            </div>
+<!-- fdfgagadf -->
+        </div>
+    </div>
+</div>

@@ -1,14 +1,12 @@
 .container-cities {
-    border: 1px solid;    
+    border: 1px solid;
     margin-top: 20px;
 }
-
 .cities {
     width: 400px;
     height: 600px;
-    background-color: lightgray;
+    background-color: #DBE9EE;
     border: 1px solid;
-    
 }
 #cities-title {
     text-align: center;
@@ -17,16 +15,16 @@
 #gibraltar {
     height: 80px;
     width: 160px;
-    border: 2px solid;   
-    margin-bottom: 50px; 
+    border: 2px solid;
+    margin-bottom: 50px;
     margin-top: 30px;
     margin-left: 20px;
 }
 .cities > div > div{
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;    
-    align-items:center;    
+    margin-right: 50px;
+    align-items: center;
 }
 .cities-card {
   border-radius: 20px;
@@ -35,7 +33,3 @@
   margin: 10px;
   background-color: white;
 }
-/* 
-a{
-    font-size: 2.5vw;
-} */
