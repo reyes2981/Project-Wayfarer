@@ -51,6 +51,7 @@ export class CityComponent implements OnInit {
         return city.id === parseInt(p.get('id') || '', 10) || city.name === (p.get('name') || '') ;       
       });
     });
+    
     this.findWeather(this.city.name || '', this.city.country ||'');
 
   }
