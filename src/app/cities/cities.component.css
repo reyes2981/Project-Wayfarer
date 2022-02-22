@@ -36,5 +36,10 @@
     border: black solid 1px;
     height: 135px;
     margin: 10px;
-    background-color: white;
+    background-color: #166088;
+}
+
+a {
+    text-decoration: none;
+    color: #C0D6DF;
 }

@@ -13,7 +13,7 @@ export const CITIES = [
       id:2,
       title: "It is a British Overseas Territory",
       author: 'Schmitty2',
-      body: 'While there’s something called the “Rock of Gibraltar,” a huge limestone ridge measuring 1,400 feet tall that dominates all of Gibraltar, it’s not just a rock in the ocean. Instead, Gibraltar is a modern British Overseas Territory located on Spain’s southern coast.'
+      body: 'While theres something called the “Rock of Gibraltar,” a huge limestone ridge measuring 1,400 feet tall that dominates all of Gibraltar, it’s not just a rock in the ocean. Instead, Gibraltar is a modern British Overseas Territory located on Spain’s southern coast.'
     }]
   }, {
     id: 2,

@@ -1,11 +1,10 @@
-
 <div class="row container-cities">
     <div class="col-sm-4 cities">
         <h1 id="cities-title">Cities</h1>
 
         <div class="cities-card" *ngFor="let city of cities">
             <div>
-                <img id="gibraltar" src="{{city.imgUrl}}"/>
+                <img id="gibraltar" src="{{city.imgUrl}}" />
                 <h3 id="city">
                     <a routerLink="/cities/{{city.id}}">
                         {{city.name | titlecase}}
@@ -14,13 +13,13 @@
             </div>
 
         </div>
-    
-     </div>
+
+    </div>
     <div class="col-sm-8">
         <router-outlet></router-outlet>
     </div>
-     
-    
-   
-       
+
+
+
+
 </div>
