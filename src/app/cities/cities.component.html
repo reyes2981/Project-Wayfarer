@@ -6,9 +6,9 @@
         <div class="cities-card" *ngFor="let city of cities">
             <div>
                 <img id="gibraltar" src="{{city.imgUrl}}"/>
-                <h3>
-                    <a routerLink="/cities/{{city.name}}">
-                        {{city.name}} 
+                <h3 id="city">
+                    <a routerLink="/cities/{{city.id}}">
+                        {{city.name | titlecase}}
                     </a>
                 </h3>
             </div>

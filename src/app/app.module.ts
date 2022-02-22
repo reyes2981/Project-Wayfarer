@@ -9,6 +9,7 @@ import { PostComponent } from './post/post.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     CitiesComponent,
     CityComponent,
     GalleryComponent,
+    SearchComponent,
     
   ],
   imports: [
