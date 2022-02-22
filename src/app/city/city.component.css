@@ -1,19 +1,24 @@
 .component-card {
-    margin-bottom: 40px
-  }
-.component-card > img{
+    margin-bottom: 40px;
+    background-color: #C0D6DF;
+}
+
+.component-card>img {
     display: block;
     width: 100%;
     height: 300px;
     margin: 10px 0 10px 20px;
     border: 1px solid black;
 }
-#weather-info{
-  color: coral;
+
+#weather-info {
+    color: coral;
 }
-.temp{
-color: lightcoral;
+
+.temp {
+    color: lightcoral;
 }
-img{
-  margin-top: 20px;
+
+img {
+    margin-top: 20px;
 }
