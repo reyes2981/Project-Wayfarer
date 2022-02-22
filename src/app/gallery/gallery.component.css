@@ -1,21 +1,42 @@
 h1 {
     margin: 0 auto;
+    position: relative;
+    bottom: 30px;
 }
 
 #topic {
     display: flex;
     justify-content: space-around;
+    position: relative;
+    top: 50px;
+    color: #166088;
 }
 
 p {
     margin-top: 0;
     padding-left: 2%;
     padding-right: 2%;
+    position: relative;
+    right: 40px;
+}
+
+#about {
+    position: relative;
+    right: 5px;
+}
+
+#location {
+    position: relative;
+    left: 10px;
+}
+
+#benefits {
+    position: relative;
+    left: 10px;
 }
 
 .carousel {
     margin-top: 1%;
-    
     /* margin-bottom: 20%; */
 }
 
@@ -39,12 +60,11 @@ ul.slides {
 }
 
 ul.slides input {
-    display: none; 
+    display: none;
 }
 
-
-.slide-container { 
-    display: block; 
+.slide-container {
+    display: block;
 }
 
 .slide-image {
@@ -55,7 +75,7 @@ ul.slides input {
     top: 0;
     opacity: 0;
     transition: all .7s ease-in-out;
-}   
+}
 
 .slide-image img {
     width: auto;
@@ -83,7 +103,7 @@ ul.slides input {
     cursor: pointer;
 }
 
-.slide-image:hover + .carousel-controls label{
+.slide-image:hover+.carousel-controls label {
     opacity: 0.5;
 }
 
@@ -122,25 +142,25 @@ ul.slides input {
     margin: 10px;
 }
 
-input:checked + .slide-container .slide-image {
+input:checked+.slide-container .slide-image {
     opacity: 1;
     transform: scale(1);
     transition: opacity 1s ease-in-out;
 }
 
-input:checked + .slide-container .carousel-controls label {
-     display: block; 
+input:checked+.slide-container .carousel-controls label {
+    display: block;
 }
 
-input#img-1:checked ~ .carousel-dots label#img-dot-1,
-input#img-2:checked ~ .carousel-dots label#img-dot-2,
-input#img-3:checked ~ .carousel-dots label#img-dot-3,
-input#img-4:checked ~ .carousel-dots label#img-dot-4,
-input#img-5:checked ~ .carousel-dots label#img-dot-5,
-input#img-6:checked ~ .carousel-dots label#img-dot-6 {
-	opacity: 1;
+input#img-1:checked~.carousel-dots label#img-dot-1,
+input#img-2:checked~.carousel-dots label#img-dot-2,
+input#img-3:checked~.carousel-dots label#img-dot-3,
+input#img-4:checked~.carousel-dots label#img-dot-4,
+input#img-5:checked~.carousel-dots label#img-dot-5,
+input#img-6:checked~.carousel-dots label#img-dot-6 {
+    opacity: 1;
 }
 
-
-input:checked + .slide-container .nav label { display: block; }
-
+input:checked+.slide-container .nav label {
+    display: block;
+}
